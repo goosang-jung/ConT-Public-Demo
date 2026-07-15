@@ -1,0 +1,149 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.*.js
+.env.*.ts
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Runtime
+.local-run/
+.pytest_tmp/
+.rc_pytest_tmp/
+runs/
+logs/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+
+# Secrets (CRITICAL - DO NOT REMOVE)
+.secret*
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# API Keys (CRITICAL)
+*api_key*
+*API_KEY*
+*token*
+*TOKEN*
+*password*
+*PASSWORD*
+
+# Database Files (CRITICAL)
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# Model Weights (CRITICAL - DO NOT ADD)
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pkl
+*.joblib
+*.h5
+
+# Large Files (CRITICAL)
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
+*.exe
+*.iso
+
+# Private Configuration (CRITICAL)
+config/private*
+config/*.local.*
+deployment/credentials*
+.github/secrets*
+
+# Sensitive Data
+*customer*
+*client*
+*confidential*
+*private*
+
+# Build Artifacts
+*.tsbuildinfo
+*.js.map
+*.css.map
+
+# Yarn
+yarn-error.log
+yarn-debug.log*
+
+# npm
+package-lock.json (commented out - include for reproducibility)
+npm-debug.log*
+
+# Misc
+.prettierignore
+.eslintignore
+
+# System files
+.venv/
+.env.prod
+.env.staging
+
+# IDE cache
+.cache/
+.eslintcache

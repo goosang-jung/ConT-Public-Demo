@@ -1,0 +1,81 @@
+CONCEPTION CO., LTD. — DEMONSTRATION LICENSE
+
+Copyright © 2026 Conception Co., Ltd. All Rights Reserved.
+
+GRANT OF RIGHTS
+
+This repository and all materials contained herein ("Demo Materials") are provided
+to you solely for the purpose of evaluation and demonstration.
+
+You are granted a limited, non-exclusive, non-transferable license to:
+
+1. VIEW and READ the Demo Materials
+2. STUDY the product concepts, architecture, and workflows
+3. RUN the demo locally on your own computer for evaluation purposes
+4. PROVIDE FEEDBACK and suggestions to Conception
+
+RESTRICTIONS
+
+You MUST NOT:
+
+1. REVERSE ENGINEER, decompile, or extract proprietary algorithms
+2. COMMERCIAL USE, including:
+   - Use the demo in production environments
+   - Offer products or services based on the demo
+   - Use the demo for commercial research or development
+3. REDISTRIBUTE or SHARE the demo with third parties
+4. TRAIN AI MODELS on the demo code or data
+5. CREATE DERIVATIVE WORKS or modifications
+6. CLAIM OWNERSHIP or intellectual property rights
+7. REMOVE COPYRIGHT NOTICES or license restrictions
+
+DATA & CONFIDENTIALITY
+
+- All data in this demo is SYNTHETIC and for demonstration only
+- This demo does NOT contain production data, algorithms, or models
+- You must NOT use this demo's data or code in production systems
+- Synthetic data is marked with "production_valid": false
+
+DISCLAIMER
+
+THE DEMO MATERIALS ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+CONCEPTION MAKES NO WARRANTIES REGARDING:
+- Accuracy, completeness, or reliability of demo data
+- Suitability for any particular purpose
+- Freedom from infringement of third-party rights
+
+CONCEPTION SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM USE OF THE DEMO MATERIALS.
+
+COMMERCIAL USE
+
+For production use, commercial licensing, data science integration, or technology
+partnerships, you must obtain prior written authorization from Conception Co., Ltd.
+
+Contact: sales@conception.ai
+
+TERMINATION
+
+This license is terminated automatically if you violate any terms.
+Upon termination, you must destroy all copies of the Demo Materials.
+
+GOVERNING LAW
+
+This license is governed by the laws of South Korea.
+Any disputes shall be resolved through binding arbitration.
+
+---
+
+TEMPORARY LICENSE NOTICE:
+
+⚠️ This license is TEMPORARY and subject to change pending legal review.
+
+The following license options are under consideration:
+- Apache License 2.0 (if code reuse is permitted)
+- Proprietary Demo License (if evaluation-only)
+- Dual Licensing (open-source examples + proprietary core)
+
+Final license will be determined and published by 2026-08-15.
+
+---
+
+Questions? Contact: legal@conception.ai

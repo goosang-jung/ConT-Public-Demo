@@ -1,0 +1,35 @@
+{
+  "name": "@cont-public/contracts",
+  "version": "0.1.0",
+  "description": "TypeScript type definitions and contracts for ConT Public Demo API",
+  "license": "All Rights Reserved",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "manufacturing",
+    "physics",
+    "ai",
+    "cont",
+    "types",
+    "contracts"
+  ],
+  "author": "Conception Co., Ltd.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goosang-jung/ConT-Public-Demo"
+  },
+  "bugs": {
+    "url": "https://github.com/goosang-jung/ConT-Public-Demo/issues"
+  },
+  "homepage": "https://github.com/goosang-jung/ConT-Public-Demo#readme",
+  "devDependencies": {
+    "typescript": "^5.2.0"
+  }
+}
