@@ -1,0 +1,73 @@
+{
+  "scenario_id": "hb-001",
+  "observation_id": "obs-hb-001-20260715",
+  "process": "hybrid_bonding",
+  "timestamp": "2026-07-15T10:30:00Z",
+  "thermal": {
+    "ambient_temperature_c": 25,
+    "relative_humidity_pct": 45
+  },
+  "electrical": {
+    "applied_voltage_v": 5.0,
+    "measured_current_a": 15.0,
+    "power_w": 75
+  },
+  "mechanical": {
+    "applied_force_n": 1000,
+    "alignment_offset_um": 0.8,
+    "contact_area_mm2": 100
+  },
+  "materials": {
+    "top": {
+      "material": "silicon",
+      "thickness_um": 50,
+      "cte": 2.6
+    },
+    "bottom": {
+      "material": "silicon",
+      "thickness_um": 100,
+      "cte": 2.6
+    }
+  },
+  "process_parameters": {
+    "temperature_c": 250,
+    "time_s": 30,
+    "pressure_mpa": 10,
+    "voltage_v": 5.0,
+    "current_a": 15.0
+  },
+  "sensor_readings": {
+    "measurements": [
+      {
+        "type": "temperature_c",
+        "value": 250,
+        "unit": "°C",
+        "timestamp": "2026-07-15T10:30:00Z"
+      },
+      {
+        "type": "current_a",
+        "value": 15.0,
+        "unit": "A",
+        "timestamp": "2026-07-15T10:30:00Z"
+      },
+      {
+        "type": "displacement_um",
+        "value": 2.5,
+        "unit": "μm",
+        "timestamp": "2026-07-15T10:30:00Z"
+      }
+    ],
+    "sensor_count": 3
+  },
+  "data_quality": {
+    "quality_score": 0.95,
+    "notes": ["High quality thermal image", "All sensors functional"]
+  },
+  "metadata": {
+    "is_synthetic": true,
+    "source": "demo_generated",
+    "equipment": "Demo Bonding Tool v1.0",
+    "lot_id": "DEMO-2026-07",
+    "wafer_id": "W-001"
+  }
+}

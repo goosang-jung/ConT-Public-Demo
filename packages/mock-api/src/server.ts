@@ -16,6 +16,12 @@
 
 import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
+import scenariosRouter from "./routes/scenarios";
+import reconstructRouter from "./routes/reconstruct";
+import whatIfRouter from "./routes/what-if";
+import compareRouter from "./routes/compare";
+import rolloutRouter from "./routes/rollout";
+import evidenceRouter from "./routes/evidence";
 
 /**
  * Server configuration
@@ -91,155 +97,14 @@ app.get("/api/demo/health", (req: Request, res: Response) => {
 });
 
 /**
- * Placeholder: List scenarios
- * (Will be implemented in Step 3)
+ * === API Routes ===
  */
-app.get("/api/demo/scenarios", (req: Request, res: Response) => {
-  res.json({
-    data: [
-      {
-        id: "hb-001",
-        name: "Hybrid Bonding - Standard Process",
-        process: "hybrid_bonding",
-        description:
-          "Standard wafer bonding with typical thermal profile (Coming in Step 3)",
-      },
-    ],
-    metadata: {
-      mode: "public_demo",
-      data_origin: "synthetic",
-      production_valid: false,
-      commercial_engine_included: false,
-      timestamp: new Date().toISOString(),
-      version: "0.1.0",
-    },
-  });
-});
-
-/**
- * Placeholder: Reconstruct observation
- * (Will be implemented in Step 3)
- */
-app.post("/api/demo/reconstruct", (req: Request, res: Response) => {
-  res.json({
-    data: {
-      observation: {
-        observation_id: "obs-demo",
-        scenario_id: req.body.scenario_id ?? "hb-001",
-        process: "hybrid_bonding",
-        timestamp: new Date().toISOString(),
-      },
-      mpstate: {
-        mpstate_id: "mpstate-demo",
-        scenario_id: req.body.scenario_id ?? "hb-001",
-        process: "hybrid_bonding",
-        timestamp: new Date().toISOString(),
-      },
-    },
-    metadata: {
-      mode: "public_demo",
-      data_origin: "synthetic",
-      production_valid: false,
-      commercial_engine_included: false,
-      timestamp: new Date().toISOString(),
-      version: "0.1.0",
-    },
-  });
-});
-
-/**
- * Placeholder: What-if comparison
- * (Will be implemented in Step 3)
- */
-app.post("/api/demo/what-if", (req: Request, res: Response) => {
-  res.json({
-    data: {
-      warpage_delta_um: -0.3,
-      stress_delta_mpa: -30,
-      overall_effect: "improved",
-    },
-    metadata: {
-      mode: "public_demo",
-      data_origin: "synthetic",
-      production_valid: false,
-      commercial_engine_included: false,
-      timestamp: new Date().toISOString(),
-      version: "0.1.0",
-    },
-  });
-});
-
-/**
- * Placeholder: Scenario comparison
- * (Will be implemented in Step 3)
- */
-app.post("/api/demo/compare", (req: Request, res: Response) => {
-  res.json({
-    data: {
-      scenario_1: {},
-      scenario_2: {},
-      comparison_result: {},
-    },
-    metadata: {
-      mode: "public_demo",
-      data_origin: "synthetic",
-      production_valid: false,
-      commercial_engine_included: false,
-      timestamp: new Date().toISOString(),
-      version: "0.1.0",
-    },
-  });
-});
-
-/**
- * Placeholder: Future rollout
- * (Will be implemented in Step 3)
- */
-app.post("/api/demo/future-rollout", (req: Request, res: Response) => {
-  res.json({
-    data: {
-      rollout_id: "rollout-demo",
-      baseline_scenario: {},
-      alternative_scenarios: [],
-      assessment: {
-        recommendation: "PASS",
-      },
-    },
-    metadata: {
-      mode: "public_demo",
-      data_origin: "synthetic",
-      production_valid: false,
-      commercial_engine_included: false,
-      timestamp: new Date().toISOString(),
-      version: "0.1.0",
-    },
-  });
-});
-
-/**
- * Placeholder: Get evidence
- * (Will be implemented in Step 3)
- */
-app.get("/api/demo/evidence/:id", (req: Request, res: Response) => {
-  res.json({
-    data: {
-      evidence_id: req.params.id,
-      scenario_id: "hb-001",
-      timestamp: new Date().toISOString(),
-      decision: {
-        recommendation: "APPROVE",
-      },
-    },
-    metadata: {
-      mode: "public_demo",
-      data_origin: "synthetic",
-      production_valid: false,
-      commercial_engine_included: false,
-      timestamp: new Date().toISOString(),
-      version: "0.1.0",
-    },
-  });
-});
+app.use("/api/demo/scenarios", scenariosRouter);
+app.use("/api/demo/reconstruct", reconstructRouter);
+app.use("/api/demo/what-if", whatIfRouter);
+app.use("/api/demo/compare", compareRouter);
+app.use("/api/demo/future-rollout", rolloutRouter);
+app.use("/api/demo/evidence", evidenceRouter);
 
 /**
  * 404 handler

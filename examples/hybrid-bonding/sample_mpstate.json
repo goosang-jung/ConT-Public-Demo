@@ -1,0 +1,116 @@
+{
+  "scenario_id": "hb-001",
+  "mpstate_id": "mpstate-hb-001-20260715",
+  "process": "hybrid_bonding",
+  "timestamp": "2026-07-15T10:30:15Z",
+  "thermal": {
+    "temperature_field": {
+      "field_type": "temperature",
+      "shape": [64, 64, 32],
+      "data_ref": "synthetic://hb-001/thermal_field",
+      "units": "°C",
+      "peak_value": 260,
+      "mean_value": 245
+    },
+    "peak_temperature_c": 260,
+    "mean_temperature_c": 245,
+    "min_temperature_c": 180,
+    "heat_source_power_w": 75
+  },
+  "electrical": {
+    "current_density_field": {
+      "field_type": "current_density",
+      "shape": [64, 64, 32],
+      "data_ref": "synthetic://hb-001/current_density_field",
+      "units": "A/mm²",
+      "peak_value": 2.5,
+      "mean_value": 1.0
+    },
+    "joule_heating_field": {
+      "field_type": "joule_heating",
+      "shape": [64, 64, 32],
+      "data_ref": "synthetic://hb-001/joule_heating_field",
+      "units": "W/mm³",
+      "peak_value": 1.2,
+      "mean_value": 0.4
+    },
+    "peak_current_density": 2.5,
+    "mean_current_density": 1.0,
+    "total_current_a": 15.0,
+    "power_dissipation_w": 75,
+    "crowding_factor": 2.5
+  },
+  "mechanical": {
+    "stress_field": {
+      "field_type": "stress",
+      "shape": [64, 64, 32],
+      "data_ref": "synthetic://hb-001/stress_field",
+      "units": "MPa",
+      "peak_value": 450,
+      "mean_value": 180
+    },
+    "deformation_field": {
+      "field_type": "deformation",
+      "shape": [64, 64, 32],
+      "data_ref": "synthetic://hb-001/deformation_field",
+      "units": "μm",
+      "peak_value": 3.2,
+      "mean_value": 1.8
+    },
+    "peak_stress_mpa": 450,
+    "von_mises_stress_mpa": 420,
+    "mean_stress_mpa": 180,
+    "principal_stresses": {
+      "sigma_1_mpa": 450,
+      "sigma_2_mpa": 380,
+      "sigma_3_mpa": 120
+    }
+  },
+  "deformation": {
+    "warpage_um": 1.8,
+    "lateral_distortion_um": 0.3,
+    "tilt_angle_deg": 0.05,
+    "interface_gap_nm": 15,
+    "void_fraction_pct": 2.1,
+    "curvature_per_mm": 0.05
+  },
+  "interface": {
+    "contact_pressure_mpa": 12.5,
+    "contact_area_fraction": 0.95,
+    "gap_profile": {
+      "center_nm": 10,
+      "edge_nm": 20,
+      "corner_nm": 25
+    },
+    "void_probability": 0.032,
+    "crack_probability": 0.008,
+    "interface_strength_mpa": 250
+  },
+  "defect": {
+    "void_risk": 0.032,
+    "crack_risk": 0.008,
+    "delamination_risk": 0.015
+  },
+  "reconstruction_quality": {
+    "confidence": 0.91,
+    "uncertainty_pct": 8.2,
+    "fidelity_score": 0.88,
+    "method": "pinn",
+    "notes": ["High confidence reconstruction", "Validated against measurement"]
+  },
+  "key_metrics": {
+    "warpage_um": 1.8,
+    "interface_gap_nm": 15,
+    "peak_stress_mpa": 450,
+    "void_risk_pct": 3.2,
+    "crack_risk_pct": 0.8,
+    "quality_score": 88
+  },
+  "metadata": {
+    "is_synthetic": true,
+    "source": "demo_synthetic",
+    "models_used": ["thermal_model", "electrical_model", "mechanical_model"],
+    "computation_time_ms": 234,
+    "observation_id": "obs-hb-001-20260715"
+  }
+}

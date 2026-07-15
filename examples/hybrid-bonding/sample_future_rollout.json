@@ -1,0 +1,136 @@
+{
+  "rollout_id": "rollout-hb-001-20260715",
+  "scenario_id": "hb-001",
+  "process": "hybrid_bonding",
+  "timestamp": "2026-07-15T10:30:20Z",
+  "baseline_scenario": {
+    "scenario_id": "hb-001-baseline",
+    "name": "Baseline: Temperature 250°C, Time 30s",
+    "parameters": {
+      "temperature_c": 250,
+      "time_s": 30,
+      "pressure_mpa": 10
+    },
+    "predictions": {
+      "final_warpage_um": 1.8,
+      "final_interface_gap_nm": 15,
+      "final_peak_stress_mpa": 450,
+      "void_probability": 0.032,
+      "crack_probability": 0.008,
+      "pass_prediction": true,
+      "confidence": 0.91
+    },
+    "uncertainty": {
+      "warpage_distribution": {
+        "metric": "warpage_um",
+        "percentiles": {
+          "p10": 1.2,
+          "p25": 1.5,
+          "p50": 1.8,
+          "p75": 2.1,
+          "p90": 2.5
+        },
+        "distribution_type": "normal",
+        "mean": 1.8,
+        "std_dev": 0.35
+      },
+      "estimated_accuracy_pct": 91
+    }
+  },
+  "alternative_scenarios": [
+    {
+      "scenario_id": "hb-001-alt-high-temp",
+      "name": "Alternative 1: Temperature 260°C, Time 30s",
+      "parameters": {
+        "temperature_c": 260,
+        "time_s": 30,
+        "pressure_mpa": 10
+      },
+      "predictions": {
+        "final_warpage_um": 1.5,
+        "final_interface_gap_nm": 12,
+        "final_peak_stress_mpa": 420,
+        "void_probability": 0.021,
+        "crack_probability": 0.005,
+        "pass_prediction": true,
+        "confidence": 0.89
+      },
+      "uncertainty": {
+        "warpage_distribution": {
+          "metric": "warpage_um",
+          "percentiles": {
+            "p10": 1.0,
+            "p25": 1.25,
+            "p50": 1.5,
+            "p75": 1.75,
+            "p90": 2.1
+          },
+          "distribution_type": "normal",
+          "mean": 1.5,
+          "std_dev": 0.30
+        },
+        "estimated_accuracy_pct": 89
+      },
+      "notes": "Higher temperature reduces warpage but increases stress slightly"
+    },
+    {
+      "scenario_id": "hb-001-alt-low-temp",
+      "name": "Alternative 2: Temperature 240°C, Time 35s",
+      "parameters": {
+        "temperature_c": 240,
+        "time_s": 35,
+        "pressure_mpa": 10
+      },
+      "predictions": {
+        "final_warpage_um": 2.1,
+        "final_interface_gap_nm": 22,
+        "final_peak_stress_mpa": 480,
+        "void_probability": 0.055,
+        "crack_probability": 0.012,
+        "pass_prediction": false,
+        "confidence": 0.87
+      },
+      "uncertainty": {
+        "warpage_distribution": {
+          "metric": "warpage_um",
+          "percentiles": {
+            "p10": 1.5,
+            "p25": 1.8,
+            "p50": 2.1,
+            "p75": 2.4,
+            "p90": 2.9
+          },
+          "distribution_type": "normal",
+          "mean": 2.1,
+          "std_dev": 0.42
+        },
+        "estimated_accuracy_pct": 87
+      },
+      "notes": "Lower temperature increases void risk - not recommended"
+    }
+  ],
+  "comparison": {
+    "best_scenario_id": "hb-001-alt-high-temp",
+    "worst_scenario_id": "hb-001-alt-low-temp",
+    "recommended_scenario_id": "hb-001-baseline",
+    "key_differences": [
+      "Higher temperature (260°C) reduces warpage by 0.3 μm",
+      "Lower temperature (240°C) increases void risk by 2.3%",
+      "Baseline represents optimal tradeoff between warpage and stress"
+    ]
+  },
+  "assessment": {
+    "average_void_risk": 0.036,
+    "average_crack_risk": 0.008,
+    "robustness_score": 0.82,
+    "recommendation": "PASS",
+    "explanation": "All scenarios result in acceptable bonding outcomes. Baseline recommended for robustness and yield. Alternative 1 acceptable if warpage reduction is critical."
+  },
+  "metadata": {
+    "is_synthetic": true,
+    "source": "demo_synthetic",
+    "engine": "surrogate_model",
+    "timesteps": 10,
+    "computation_time_ms": 150
+  }
+}

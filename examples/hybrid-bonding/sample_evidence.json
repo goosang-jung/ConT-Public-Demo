@@ -1,0 +1,153 @@
+{
+  "evidence_id": "evidence-hb-001-20260715",
+  "scenario_id": "hb-001",
+  "process": "hybrid_bonding",
+  "timestamp": "2026-07-15T10:30:30Z",
+  "prediction_vs_measurement": {
+    "comparisons": [
+      {
+        "metric": "warpage_um",
+        "unit": "μm",
+        "predicted_value": 1.8,
+        "measured_value": 1.7,
+        "absolute_error": 0.1,
+        "relative_error_pct": 5.6,
+        "matches": true,
+        "tolerance": 0.3
+      },
+      {
+        "metric": "interface_gap_nm",
+        "unit": "nm",
+        "predicted_value": 15,
+        "measured_value": 16,
+        "absolute_error": 1,
+        "relative_error_pct": 6.7,
+        "matches": true,
+        "tolerance": 5
+      },
+      {
+        "metric": "peak_stress_mpa",
+        "unit": "MPa",
+        "predicted_value": 450,
+        "measured_value": 448,
+        "absolute_error": 2,
+        "relative_error_pct": 0.4,
+        "matches": true,
+        "tolerance": 20
+      }
+    ],
+    "match_quality": 0.92,
+    "prediction_accurate": true
+  },
+  "validation": {
+    "status": "PASS",
+    "criterion_results": [
+      {
+        "criterion": {
+          "name": "void_risk",
+          "description": "Maximum void probability at interface",
+          "threshold_type": "less_than",
+          "threshold_value": 0.05,
+          "unit": "probability",
+          "weight": 9
+        },
+        "measured_value": 0.032,
+        "satisfied": true,
+        "margin": 0.018,
+        "message": "✓ void_risk passes (within margin)"
+      },
+      {
+        "criterion": {
+          "name": "warpage",
+          "description": "Out-of-plane warpage after cooling",
+          "threshold_type": "less_than",
+          "threshold_value": 2.0,
+          "unit": "μm",
+          "weight": 8
+        },
+        "measured_value": 1.7,
+        "satisfied": true,
+        "margin": 0.3,
+        "message": "✓ warpage passes (within margin)"
+      },
+      {
+        "criterion": {
+          "name": "crack_risk",
+          "description": "Probability of micro-cracks at interface",
+          "threshold_type": "less_than",
+          "threshold_value": 0.02,
+          "unit": "probability",
+          "weight": 9
+        },
+        "measured_value": 0.008,
+        "satisfied": true,
+        "margin": 0.012,
+        "message": "✓ crack_risk passes (within margin)"
+      },
+      {
+        "criterion": {
+          "name": "alignment",
+          "description": "Die-to-substrate alignment error",
+          "threshold_type": "less_than",
+          "threshold_value": 1.0,
+          "unit": "μm",
+          "weight": 7
+        },
+        "measured_value": 0.8,
+        "satisfied": true,
+        "margin": 0.2,
+        "message": "✓ alignment passes (within margin)"
+      }
+    ],
+    "passed_count": 4,
+    "total_count": 4,
+    "pass_rate_pct": 100,
+    "confidence": 0.91
+  },
+  "risk_assessment": {
+    "void_risk": 0.032,
+    "crack_risk": 0.008,
+    "delamination_risk": 0.015,
+    "risk_level": "LOW",
+    "risk_factors": [
+      "Current crowding at corner (manageable)",
+      "Interface gap variance (within spec)"
+    ],
+    "estimated_yield_pct": 96.5,
+    "mitigations": [
+      "Monitor corner current during production",
+      "Maintain temperature control ±2°C"
+    ]
+  },
+  "decision": {
+    "recommendation": "APPROVE",
+    "justification": "All acceptance criteria met. Prediction validated against measurement. Risk levels acceptable.",
+    "required_actions": [
+      "Standard production process",
+      "Log evidence record",
+      "Schedule quality inspection"
+    ],
+    "is_complete_analysis": true,
+    "conditions": ["Process parameters within ±5%"]
+  },
+  "quality_metrics": {
+    "model_confidence": 0.91,
+    "data_quality": 0.94,
+    "analysis_completeness": 1.0,
+    "evidence_reliability": 0.91
+  },
+  "evidence_trail": {
+    "observation_id": "obs-hb-001-20260715",
+    "mpstate_id": "mpstate-hb-001-20260715",
+    "rollout_id": "rollout-hb-001-20260715",
+    "criteria_version": "1.0",
+    "manual_review_performed": false
+  },
+  "metadata": {
+    "is_synthetic": true,
+    "evidence_type": "demo",
+    "source": "auto_generated",
+    "retention_until": "2026-12-31",
+    "is_auditable": true
+  }
+}

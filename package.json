@@ -1,0 +1,23 @@
+{
+  "name": "@cont-public/monorepo",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "install-all": "npm install",
+    "dev": "npm -w @cont-public/demo-web run dev",
+    "build": "npm -w @cont-public/demo-web run build",
+    "preview": "npm -w @cont-public/demo-web run preview",
+    "type-check": "npm -w @cont-public/demo-web run type-check",
+    "lint": "npm -w @cont-public/demo-web run lint",
+    "test": "echo 'No tests yet'",
+    "api:dev": "npm -w @cont-public/mock-api run dev"
+  },
+  "devDependencies": {
+    "npm-workspace": "^1.0.0"
+  }
+}
